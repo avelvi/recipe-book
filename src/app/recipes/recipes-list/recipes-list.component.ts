@@ -7,11 +7,10 @@ import { Recipe } from '../recipe';
   templateUrl: './recipes-list.component.html'
 })
 export class RecipesListComponent implements OnInit {
-
-  recipes: Recipe[] = [];
-
-  recipe: Recipe =  new Recipe("Dummy", "Dummy", "http://pre02.deviantart.net/4db9/th/pre/i/2009/260/f/a/blender__texture_dummy_by_3d_asuarus.jpg");
-
+    recipes: Recipe[] = [
+        new Recipe('Schnitzel', 'Very tasty', 'https://bigoven-res.cloudinary.com/image/upload/main---wiener-schnitzel-8f03d26e1f0f2601215a7029.jpg', []),
+        new Recipe('Summer Salad', 'Okayish', 'http://ohmyveggies.com/wp-content/uploads/2013/06/the_perfect_summer_salad.jpg', [])
+    ];
   @Output() recipeSelected = new EventEmitter<Recipe>()
   constructor() { }
 
